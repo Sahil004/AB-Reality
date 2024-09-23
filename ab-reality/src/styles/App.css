@@ -1,0 +1,173 @@
+:root {
+    --primary-color: #24a148;
+    --secondary-color: #9e8b5c;
+    --ternary-color: #003B75;
+    --accent-color: #f0a500;
+    --background-color: #f5f5f5;
+    --text-color: #3A3A50;
+    --primary-font: "Roboto", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none !important;
+    color: initial !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none !important;
+}
+
+/* Header */
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    z-index: 1000;
+    /* Ensure the header stays above other content */
+}
+
+.navbar-collapse {
+    position: static !important;
+    z-index: 1 !important;
+    /* Ensures the collapse is above the hero */
+}
+
+.navbar.scrolled {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add shadow after scrolling */
+    transition: background-color 0.5s ease;
+}
+
+.navbar-light {
+    background: black !important;
+}
+
+/* logo */
+
+.logo-img {
+    width: 200px;
+}
+
+.logo-name {}
+
+/* Hero */
+
+.hero-section {
+    background-image: url('../assets/city-sunset.jpg');
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: .5;
+    background: #21243d;
+
+}
+
+.hero {
+    height: 100%;
+
+}
+
+.hero-page {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-heading {
+    color: #fafafa;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.hero-content {
+    opacity: 0.8;
+}
+
+.service-button {
+    background-color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    color: #ffffff !important;
+
+    padding: 12px 45px !important;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.service-button:hover {
+    border: none;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    transition: background-color 0.5s ease;
+}
+
+.social-icons li a:hover {
+    background-color: #ffffff;
+    color: var(--primary-color) !important;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+
+    .logo-img {
+        width: 300px;
+    }
+
+    .hero-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .navbar-light {
+        background: transparent !important;
+        position: absolute !important;
+        top: 20px;
+        left: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    .hero-heading {
+        font-size: 60px;
+    }
+}
