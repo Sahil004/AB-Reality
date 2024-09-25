@@ -4,8 +4,9 @@
     --ternary-color: #003B75;
     --accent-color: #f0a500;
     --background-color: #f5f5f5;
-    --text-color: #3A3A50;
-    --primary-font: "Roboto", sans-serif;
+    --text-color-black: #3A3A50;
+    --text-color-white: #E0E0E0;
+    --primary-font: "Roboto Condensed", sans-serif;
 }
 
 html {
@@ -72,7 +73,6 @@ select:focus {
     width: 200px;
 }
 
-.logo-name {}
 
 /* Hero */
 
@@ -143,6 +143,67 @@ select:focus {
     background-color: #ffffff;
     color: var(--primary-color) !important;
     transition: all 0.3s ease;
+}
+
+
+/* features */
+.features {
+    background-color: var(--primary-color);
+}
+
+.features-heading {
+    font-size: 22px;
+}
+
+.features-description {
+    color: var(--text-color-white);
+}
+
+/* Properties */
+
+.properties {
+    padding-top: 6em;
+    padding-bottom: 6em;
+}
+
+.section-sub-heading {
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 0;
+    color: #24A148;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-sub-heading:before {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    content: '';
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 50px;
+    height: 1px;
+    margin-top: -1px;
+    background: #24A148;
+}
+
+.section-sub-heading:after {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    content: '';
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 50px;
+    height: 1px;
+    margin-top: -1px;
+    background: #24A148;
 }
 
 @media (min-width: 768px) {
