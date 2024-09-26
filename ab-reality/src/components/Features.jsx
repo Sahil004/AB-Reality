@@ -25,7 +25,7 @@ const featureData = [
 
 const Features = () => {
     return (
-        <section className="container-fluid features py-4">
+        <section className="container-fluid features py-4" id="features">
             <div className="container">
                 <div className="row">
                     {featureData.map((feature, index) => (

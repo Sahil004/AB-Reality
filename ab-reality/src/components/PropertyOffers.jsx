@@ -1,4 +1,3 @@
-// src/components/PropertyOffers.jsx
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 
@@ -40,21 +39,31 @@ const PropertyOffers = () => {
     };
 
     return (
-        <section className="container-fluid properties">
+        <section className="container-fluid properties" id='properties'>
             <div className="container">
                 <div className="property-offers">
                     <div className="section-top pb-5 text-center">
                         <span className="section-sub-heading text-uppercase">What We Offer</span>
-                        <h2 className='section-heaidng'>Featured Properties</h2>
+                        <h2 className="section-heading">Featured Properties</h2>
                     </div>
                     <Slider {...settings}>
                         {properties.map((property) => (
-                            <div key={property.id} className="property-item">
-                                <img src={property.image} alt={property.name} className="property-image" />
-                                <h3>{property.name}</h3>
-                                <p>{property.location}</p>
-                                <p>{property.price}</p>
-                                <p>{property.type}</p>
+                            <div key={property.id} className="property-item px-3 position-relative">
+                                <div className='property-box pb-3'>
+                                    <div className="property-image-wrapper ">
+                                        <img
+                                            src={`http://localhost:5000${property.image}`} // Access image from the backend
+                                            alt={property.name}
+                                            className="property-image"
+                                        />
+                                        <div className="property-overlay">
+                                            <span className="property-type">{property.type}</span>
+                                            <span className="property-price">{property.price}</span>
+                                        </div>
+                                    </div>
+                                    <h3>{property.name}</h3>
+                                    <p>{property.location}</p>
+                                </div>
                             </div>
                         ))}
                     </Slider>

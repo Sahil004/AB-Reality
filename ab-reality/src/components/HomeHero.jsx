@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeHero = () => {
     return (
-        <section className='container-fluid hero-section'>
+        <section className='container-fluid hero-section' id='home'>
             <div className="overlay"></div>
             <div className="container hero">
                 <div className="row align-items-center hero-page text-center text-md-start">
