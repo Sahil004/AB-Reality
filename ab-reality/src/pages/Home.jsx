@@ -5,6 +5,8 @@ import PropertyOffers from '../components/PropertyOffers';
 import Services from '../components/Services';
 import About from '../components/About';
 import Agents from '../components/Agents';
+import Contact from '../components/Contact';
+import ToTop from '../components/ToTop';
 
 const Home = () => {
     return (
@@ -15,6 +17,8 @@ const Home = () => {
             <Services />
             <About />
             <Agents />
+            <Contact />
+            <ToTop />
         </main>
     );
 };

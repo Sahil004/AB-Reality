@@ -31,10 +31,20 @@ a {
     color: initial !important;
 }
 
+input,
+textarea,
+select {
+    border-color: var(--primary-color) !important;
+    border-radius: 0px !important;
+}
+
 input:focus,
 textarea:focus,
 select:focus {
     outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--primary-color) !important;
+    border-radius: 0px !important;
 }
 
 /* Header */
@@ -157,6 +167,10 @@ select:focus {
 
 .features-description {
     color: var(--text-color-white);
+}
+
+.border-bottom-sm{
+    border-top: 1px solid var(--text-color-white);
 }
 
 /* Properties */
@@ -357,11 +371,64 @@ select:focus {
     }
 }
 
+/* Contact Us */
+
+.contact-section {
+    padding-top: 6em;
+    padding-bottom: 6em;
+    background: linear-gradient(rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)), url('../assets/contact-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.form-control {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    background-color: transparent !important;
+}
+
 /* footer */
 
 .footer {
     background-color: var(--secondary-color);
 }
+
+.contact-button {
+    background-color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    color: #ffffff !important;
+    border-radius: 0px !important;
+    padding: 12px 45px !important;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.contact-button:hover {
+    border: none;
+    background-color: transparent !important;
+    color: var(--primary-color) !important;
+    transition: background-color 0.5s ease;
+}
+
+.detail-heading {
+    color: var(--primary-color);
+}
+
+/* To Top */
+
+.to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    height: 40px;
+    width: 40px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
 @media (min-width: 768px) {
 
     .logo-img {
@@ -370,6 +437,9 @@ select:focus {
 
     .hero-heading {
         font-size: 50px;
+    }
+    .border-bottom-sm{
+        border-top: none;
     }
 }
 
@@ -386,5 +456,9 @@ select:focus {
 
     .hero-heading {
         font-size: 60px;
+    }
+
+    .border-lg-start {
+        border-left: 1px solid white;
     }
 }

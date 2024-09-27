@@ -51,19 +51,19 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link className="nav-link text-light px-4 py-3" to="/">Home</Link>
+                            <a className="nav-link text-light px-4 py-3" href="#home">Home</a>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-light px-4 py-3" to="/agents">Agents</Link>
+                            <a className="nav-link text-light px-4 py-3" href="#agents">Agents</a>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-light px-4 py-3" to="/services">Services</Link>
+                            <a className="nav-link text-light px-4 py-3" href="#services">Services</a>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-light px-4 py-3" to="/properties">Properties</Link>
+                            <a className="nav-link text-light px-4 py-3" href="#properties">Properties</a>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-light px-4 py-3" to="/contact">Contact</Link>
+                            <a className="nav-link text-light px-4 py-3" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
